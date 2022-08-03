@@ -1,0 +1,460 @@
+/*
+Date : 04.01.2021
+Auteur : Noé Henchoz - 300211
+Descriptif : Ce fichier est le code CSS principal du site développé
+			 en HTML par Noé Henchoz lors du module 101 à l'EMF.
+*/
+
+/* Importation de la police "ConcertOne-Regular" téléchargée depuis 
+"https://fonts.google.com/" */
+@font-face {
+	font-family: ConcertOne-Regular;
+	src: url('../fonts/ConcertOne-Regular.ttf');
+}
+
+/* Importation de la police "Nunito-Bold" téléchargée depuis 
+"https://fonts.google.com/" */
+@font-face {
+	font-family: Nunito-Bold;
+	src: url('../fonts/Nunito-Bold.ttf');
+}
+
+/* Ici, j'indique que je n'aimerais pas de marge ni de padding sur le contenu de 
+mon site. J'ajoute également une couleur de fond blanche (pas très utile mais 
+bon). Je termine par indiquer que le comportement du scroll doit être smooth, 
+assez lent et doux. */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: white;
+	scroll-behavior: smooth;
+}
+
+/* Ici, c'est une propriété qui n'est pas des plus utiles mais je l'ai quand 
+même mise car elle permet de changer la couleur de fond de la sélection des 
+différents éléments du site. J'ai donc choisi une couleur de fond noire car 
+la seléction de base bleue ne se voyait pas trop vu que mon site est pas mal 
+bleu. */
+p::selection,
+h1::selection,
+h2::selection,
+div::selection,
+a::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+td::selection {
+	background-color: black;
+}
+
+/* J'ai choisi de modifier la barre de scroll de la page, avec -webkit-scrollbar,
+je change la couleur de fond derrière la barre de scroll et lui applique 
+une largeur de 16px. */
+body::-webkit-scrollbar {
+	width: 16px;
+	background-color: #5499c7;
+}
+
+/* Ceci suit les propriétés du dessus, ici, j'ajoute une couleur à la barre de 
+scroll (blanc) avec les bords arrondis de 10px. */
+body::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 10px;
+}
+
+/* J'ai choisi d'appliquer un id au body de la page d'accueil comme ça je peux 
+lui appliquer une image de fond qui défile en même temps que le scroll. */
+#accueil {
+	background-image: url(../images/img-accueil.jpg);
+}
+
+/* J'ai donc appliqué une class aux body des autres pages afin d'appliquer la
+propriété "background-attachement: fixed" qui fait que l'image de fond reste 
+statique derrière le contenu. Le résultat est celui attendu, l'image de fond de 
+la page d'accueil est différent que celui des autres pages. */
+.page {
+	background-image: url(../images/img-accueil.jpg);
+	background-attachment: fixed;
+}
+
+/* inner est la div contenant la barre de navigation (menu) et je lui ai appliqué
+les propriété largeur, margin, et padding-top pour que mon menu ne prenne pas tout
+l'écran et soit décollé du haut de la page. */
+.inner {
+	width: 90%;
+	margin: auto;
+	padding-top: 1%;
+}
+
+/* title est la div du titre principal sur chaque page du site. Je lui ai appliqué
+la police Nunito téléchargée auparavant avec une grosseur de 700 et un espacement
+entre les lettre de 1px. Le titre est de couleur blanche, centré et de taille 60px.
+Il a aussi une marge du haut et du bas de 300px pour le placer un peu au centre
+du site. Pour finir, j'ai copié un effet 3D pour le titre que j'ai trouvé sur
+https://www.guyom-design.com/blog/demos/css/effet-texte-css3/ */
+.title {
+	font-family: 'Nunito-Bold';
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	margin-top: 300px;
+	margin-bottom: 300px;
+	text-shadow: 0 0 0 #5499c7, 0.0025em 0.0025em 0 #5499c7,
+		0.005em 0.005em 0 #5499c7, 0.0075em 0.0075em 0 #5499c7,
+		0.01em 0.01em 0 #5499c7, 0.0125em 0.0125em 0 #5499c7,
+		0.015em 0.015em 0 #5499c7, 0.0175em 0.0175em 0 #5499c7,
+		0.02em 0.02em 0 #5499c7, 0.0225em 0.0225em 0 #5499c7,
+		0.025em 0.025em 0 #5499c7, 0.0275em 0.0275em 0 #5499c7,
+		0.03em 0.03em 0 #5499c7, 0.0325em 0.0325em 0 #5499c7,
+		0.035em 0.035em 0 #5499c7, 0.0375em 0.0375em 0 #5499c7,
+		0.04em 0.04em 0 #5499c7, 0.0425em 0.0425em 0 #5499c7,
+		0.045em 0.045em 0 #5499c7, 0.0475em 0.0475em 0 #5499c7,
+		0.05em 0.05em 0 #5499c7, 0.0525em 0.0525em 0 #5499c7,
+		0.055em 0.055em 0 #5499c7, 0.0575em 0.0575em 0 #5499c7,
+		0.06em 0.06em 0 #5499c7, 0.0625em 0.0625em 0 #5499c7,
+		0.065em 0.065em 0 #5499c7, 0.0675em 0.0675em 0 #5499c7,
+		0.07em 0.07em 0 #5499c7, 0.0725em 0.0725em 0 #5499c7,
+		0.075em 0.075em 0 #5499c7, 0.0775em 0.0775em 0 #5499c7,
+		0.08em 0.08em 0 #5499c7, 0.0825em 0.0825em 0 #5499c7,
+		0.085em 0.085em 0 #5499c7, 0.0875em 0.0875em 0 #5499c7,
+		0.09em 0.09em 0 #5499c7, 0.0925em 0.0925em 0 #5499c7,
+		0.095em 0.095em 0 #5499c7, 0.0975em 0.0975em 0 #5499c7,
+		0.1em 0.1em 0 #5499c7;
+}
+
+/* Tous mes paragraphes sont les mêmes, je n'ai donc pas de class et j'ai
+donc appliqués une taille de 22px, une fonte Arial blanche et un alignement 
+justifié directement sur la balise p. */
+p {
+	font-size: 22px;
+	font-family: Arial;
+	color: white;
+	text-align: justify;
+}
+
+/* Cette div est la zone dans laquelle est écrit le contenu de la page index, 
+dans un article. Elle possède donc une couleur bleue (légèrement transparente),
+des bords arrondis à 45px et une marge de 10% à droite et à gauche. */
+.div-content-index {
+	background-color: #388fe6c4;
+	border-radius: 45px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/* Ici, c'est la class de l'article de l'index, il possède des marges de 40px 
+à droite et à gauche pour ne pas avoir le texte collé aux bords. */
+.article-content-index {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/* Ceci est le titre de l'article de l'index, il a la police "Nunito-Bold" en 
+taille 45px et de couleur blanche. Un léger padding au top est appliqué pour 
+une question d'harmonie. */
+.title-content-index {
+	font-family: 'Nunito-Bold';
+	font-size: 45px;
+	color: white;
+	padding-top: 5px;
+}
+
+/* Cette div est la zone dans laquelle est écrit le contenu des pages autre que
+l'index, dans un article. Elle possède donc une couleur bleue (légèrement 
+transparente), des bords arrondis à 45px et une marge de 15% à droite et à 
+gauche. */
+.div-content-page {
+	background-color: #388fe6c4;
+	border-radius: 45px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+/* Ici, c'est la class de l'article des pages autre que l'index, elle possède des
+marges de 40px à droite et à gauche pour ne pas avoir le texte collé aux bords.
+Un padding top et bottom de 10px est appliqué pour des questions d'harmonie. */
+.article-content-page {
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Ceci est le titre de l'article des pages autres que l'index, il a la police 
+"Nunito-Bold" en taille 50px et de couleur blanche. */
+.title-content-page {
+	font-family: 'Nunito-Bold';
+	font-size: 50px;
+	color: white;
+}
+
+/* Ceci est la class des sous-titres des articles. Un padding top de 15px et un
+de bottom de 5px sont appliqués pour des question d'harmonie. Les sous-titres
+sont en taille 30px de couleur blanche avec la fonte "Nunito-Bold". */
+.subtitle-articles {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 30px;
+	color: white;
+	font-family: 'Nunito-Bold';
+}
+
+/* La class copyright contient le texte de copyright de l'image de fond. Le 
+texte est alignée à droite avec la fonte "Nunito-Bold" en taille 20px et 
+possède une marge de droite de 1% pour éviter d'être collé à droite de la page.
+Un padding de 25% est appliqué pour des questions d'harmonie. */
+.copyright {
+	text-align: right;
+	margin-right: 1%;
+	font-family: 'Nunito-Bold';
+	font-size: 20px;
+	padding: 25px;
+}
+
+/* Le texte de copyright contient le nom du site sous un lien hypertext. Ce 
+lien est stylisé ici. J'ai supprimé la décoration du texte pour supprimer 
+le soulignement, je lui ai ajouté une couleur blanche et une transition qui 
+adouci le tout en 0.3 seconde. */
+.copyright-link {
+	text-decoration: none;
+	color: white;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Ceci complète le .copyright-link, quand on le hover (passe dessus), la 
+couleur devient noire avec une transition adoucie de 0.3 seconde. */
+.copyright-link:hover {
+	color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Ceci est la class de mes images, toutes les images possèdent cette class et
+sont donc centrées avec une bordure arrondie de 15px. Max-width et height rendent 
+les images responsives. Elles ne dépassent pas la largeur de 80% et la hauteur 
+est adaptée automatiquement. */
+.img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	max-width: 80%;
+	height: auto;
+}
+
+/* Cette class sert à ajouter une légende à toutes mes images. Elle centre le 
+texte blanc avec la police "Nunito-Bold" de taille 16px. */
+.legend {
+	text-align: center;
+	color: white;
+	font-family: 'Nunito-Bold';
+	font-size: 16px;
+}
+
+/* Cette class contient la source de l'image sous un lien hypertext. C'est 
+celui-ci qui est modifié ici. Je lui ai appliqué un alignement centré, j'ai 
+supprimé le soulignement du lien avec text-decoration. Le texte est blanc et en 
+"Nunito-Bold" avec une transition adoucie de 0.3 seconde. */
+.legend-link {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-family: 'Nunito-Bold';
+	transition: all 0.3s ease-in-out;
+}
+
+/* Ceci permet de changer la couleur du .legend-link en noir avec une 
+transition douce de 0.3 seconde lors du hover (quand on passe sur le texte). */
+.legend-link:hover {
+	color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Ceci est la zone de code. Elle possède un fond gris, des bords arrondis à 
+15px et une marge de 10% est appliquée à droite et à gauche. */
+.content-code {
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: grey;
+	border-radius: 15px;
+}
+
+/* Ici, j'ai ajouté différents padding pour un rendu de qualité. */
+.zone-code {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Ceci modifie l'apparence du texte dans la zone de code. Le texte est jaune 
+dans une police non proportionnelle : Courrier New. */
+.code {
+	color: #fbc038;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+/* Cette class concerne la cellule contenant le texte de certification W3C. Le
+texte est aligné à gauche avec du padding pour ne pas qu'il soit collé à gauche.
+J'indique que cette cellule a une taille de 25%. (Ce n'est sûrement pas la 
+meilleure manière mais si je ne le faisais pas, le tableau faisait n'importe 
+quoi)*/
+.certified {
+	text-align: left;
+	padding-left: 2%;
+	width: 25%;
+}
+
+/* Cette class concerne la cellule contenant l'auteur. Le texte est aligné et 
+la cellule a une taille de 25%.*/
+.author {
+	text-align: center;
+	width: 25%;
+}
+
+/* Cette class concerne la date automatique. Le texte est centré et la cellule
+a une taille de 25%. */
+.date {
+	text-align: center;
+	width: 25%;
+}
+
+/* Cette class concerne la flèche de retour en haut de page. Elles est alignée 
+à droite avec un padding de 2% pour éviter qu'elle soit collé à droite. 
+J'indique aussi que la largeur de la cellule est de 25%. */
+.arrow {
+	text-align: right;
+	padding-right: 2%;
+	width: 25%;
+}
+
+/* Ici, je dis que ma flèche de retour en haut de page doit être de couleur 
+blanche et que lorsque que le curseur passe dessus, il se transforme en pointer
+comme si la flèche était un bouton. */
+.arrow i {
+	color: white;
+	cursor: pointer;
+}
+
+/* Ici, j'indique que mon tableau doit prendre 100% de la page, en largeur. */
+.t-footer {
+	width: 100%;
+}
+
+/* Ceci est la div qui crée le footer. L'alignement vertical est centré, j'ai 
+une largeur de 100% et un bottom à 0 pour qu'il soit collé en bas. La couleur
+du foter est bleue et le texte centré est blanc. Il est en "ConcertOne-Regular"
+avec un espacement entre les lettres de 1px. Le texte est de taille 25px. Le 
+footer est en position fixée, ce qui lui permet de rester en bas tout le 
+temps. */
+.footer {
+	vertical-align: center;
+	bottom: 0;
+	width: 100%;
+	background-color: #5499c7;
+	color: white;
+	text-align: center;
+	font-family: 'ConcertOne-Regular';
+	letter-spacing: 1px;
+	font-size: 25px;
+	position: fixed;
+}
+
+/* J'ai décidé de rendre mon site responsive, j'ai donc dû utiliser les 
+@media queries pour adapter le tout sur les petits écrans. Ce media-ci s'occupe
+des éléments suivants si la largeur de l'écran est de 1130px ou moins. */
+@media only screen and (max-width: 1130px) {
+	/* La police du footer est réduite à 18px. */
+	.footer {
+		font-size: 18px;
+		padding-bottom: 3px;
+	}
+
+	/* La taille du titre princpal est réduite à 40px et les marges aussi à 
+	200px. */
+	.title {
+		font-size: 40px;
+		margin-top: 200px;
+		margin-bottom: 200px;
+	}
+
+	/* La taille de police des paragraphes est réduite à 18px. */
+	p {
+		font-size: 18px;
+	}
+
+	/* Les marges droites et gauches des articles sont réduites à 20px. */
+	.article-content-index,
+	.article-content-page {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	/* La taille de police des titres des articles est réduite à 30px. */
+	.title-content-index,
+	.title-content-page {
+		font-size: 30px;
+	}
+
+	/* La taille du texte copyright est réduite à 15px, le padding-bottom est 
+	aussi réduit à 24px. */
+	.copyright {
+		font-size: 15px;
+		padding-bottom: 24px;
+		padding-top: 0;
+		margin-right: 0;
+	}
+
+	/* Le code (texte) a la marge de gauche retirée et la police est réduite 
+	en 12px. */
+	.code {
+		margin-left: 0;
+		font-size: 12px;
+	}
+
+	/* La zone de code n'a plus de marges. */
+	.content-code {
+		margin: 0;
+	}
+
+	/* Les marges du contenu de l'index et des pages sont réduites à 2%. */
+	.div-content-index,
+	.div-content-page {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+}
+
+/* Ici, je n'ai sûrement pas utilisé le bon moyen mais par manque de temps je 
+l'ai laissé. J'ai en fait utilisé plusieurs @media pour que le footer soit 
+toujours au dessus du footer. J'aurais dû appliquer une position à mon 
+.copyright mais par manque de temps, je suis resté sur cette idée de remonter 
+à chaque fois le copyright au dessus du footer, d'où le fait que je lui 
+augmente son padding-bottom à chaque fois.*/
+@media only screen and (max-width: 686px) {
+	.copyright {
+		padding-bottom: 45px;
+		padding-top: 0;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 364px) {
+	.copyright {
+		padding-bottom: 65px;
+	}
+}
+
+@media only screen and (max-width: 505px) {
+	.copyright {
+		padding-bottom: 65px;
+	}
+}
+
+@media only screen and (max-width: 364px) {
+	.copyright {
+		padding-bottom: 65px;
+	}
+}

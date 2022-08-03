@@ -1,0 +1,106 @@
+/*
+Date : 04.01.2021
+Auteur : Noé Henchoz - 300211
+Descriptif : Ce fichier est le code CSS du header responsve du site développé
+			 en HTML par Noé Henchoz lors du module 101 à l'EMF.
+*/
+
+/* J'ai commencé par masquer l'overflow de mon menu. Je lui ai ajouté une 
+couleur bleue et des bords arrondis à 15px. */
+.navigation {
+  overflow: hidden;
+  background-color: #5499c7;
+  border-radius: 15px;
+}
+
+/* J'ai stylisé mes menus se trouvant dans ma barre de navigation. Le float
+left aligne les menu à gauche sous forme de block (display). Il sont de couleur
+blanche et sans décoration. Un padding de 14px sur le dessus et 16px sur les 
+côtés est présent. Les bords sont arrondis à 15px et le texte est transformé 
+en majuscule. La poice est "ConcertOne-Regular" de grosseur 700 et de taille 
+20px avec un espacement des lettres de 1px. Pour finir, margin-right laisse un
+peu d'espace entre les différents menus et nous avons aussi une transition de 
+l'ensemble en 0.3 seconde. */
+.navigation a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  font-family: 'ConcertOne-Regular';
+  transition: color 0.3s ease-in-out;
+}
+
+/* Lors du passage avec le curseur sur les différents menus, la couleur passe 
+de blanc à gris par une animation ease-in-out habituelle. */
+.navigation a:hover {
+  color: #ded9d8;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Le bouton hamburger icon n'est pas affiché (pour le moment). */
+.navigation .icon {
+  display: none;
+}
+
+/* La page active a une bordure arrondie de 50px avec un fond violet très 
+clair */
+.active,
+.index-active {
+  border-radius: 50px;
+  background-color: #c39bd3;
+}
+
+/* Ici, je rends le header responsive (adapté pour les écrans plus petits que 
+1130px) */
+@media screen and (max-width: 1130px) {
+  /* Ceci permet de masquer les menus (a) si l'écran est plus petit que 
+	1130px. */
+  .navigation a:not(:first-child) {
+    display: none;
+  }
+
+  /* L'icône hamburger s'affiche à droite, en block et lorsque'on passe 
+	dessus, le curseur devient un pointer comme si c'était un bouton. */
+  .navigation a.icon {
+    float: right;
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Lorsque nous somme sur la page d'accueil, il n'y pas de fond car cela 
+	nuisait à la beauté du header. */
+  .index-active {
+    background: none;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  /* La barre de navigaton responsive passe en position relative. */
+  .navigation.responsive {
+    position: relative;
+  }
+
+  /* Le menu hamburger s'affiche donc en position absolue sans marge à 
+	droite ni en haut. */
+  .navigation.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Les menus de navigations deviennent donc en block avec un alignement à 
+	gauche */
+  .navigation.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

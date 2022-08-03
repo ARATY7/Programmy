@@ -1,0 +1,335 @@
+<!--
+Date : 04.01.2021
+Auteur : Noé Henchoz - 300211
+Descriptif : Ce fichier est le code source de la page "langages" du site 
+			 développé en HTML par Noé Henchoz lors du module 101 à l'EMF. 
+-->
+
+<!-- Déclaration du langage de ce fichier : HTML5 -->
+<!DOCTYPE html>
+
+<!-- Déclaration de la langue du site -->
+<html lang="fr-ch">																			
+
+	<head>
+		<!-- Encodage du site en UTF-8 -->
+		<meta charset="UTF-8"/>	
+		<!-- Langages est donné comme titre -->														
+		<title>Langages</title>		
+		<!-- Balise permettant d'adapter la largeur du du site par rapport à la
+			 largeur de l'apparreil pour le responsive -->
+ 		<meta name="viewport" content="width=device-width">
+		<!-- Liaison des différentes pages CSS, image pour l'onglet et aussi 
+			 l'importation des icônes -->												
+		<link rel="stylesheet" href="./style.css"/>
+		<link rel="stylesheet" href="./header.css"/>
+		<link rel="icon" type="image/x-icon" href="../images/html5.png">					
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+				integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+					crossorigin="anonymous"/>	
+		<link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Intégration du script pour le header responsive et la date et 
+			 heure automatisée -->
+		<script src="./general.js"></script>																		
+	</head>
+
+	<body onload="start()" class="page">
+		<header id="top"> 
+			<nav class="menu">
+				<div class="inner">
+					<!-- Liste des boutons d'actions dans le menu -->
+					<div class="navigation" id="navbar">
+						<a href="../index.html">
+							<i class="fas fa-home"></i> 
+							Accueil
+						</a>
+						<a href="./programmation.html">
+							<i class="fas fa-code"></i> 
+							La Programmation
+						</a>
+						<a href="./sites-web.html">
+							<i class="fas fa-wifi"></i> 
+							Sites web
+						</a>
+						<a href="./jeux-video.html">
+							<i class="fas fa-gamepad"></i> 
+							Jeux vidéo
+						</a>
+						<a href="./langages.html" class="active">
+							<i class="fas fa-language"></i> 
+							Langages
+						</a>
+						<a class="icon" onclick="headerResponsive()">
+							<i class="fas fa-bars"></i>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Titre principal du site : <Les différents langages de programmation> -->
+		<h1 class="title">&#60;Les différents langages de programmation&#62;</h1>										
+				
+		<!-- div contenant le contenu de la page, dans un article -->
+		<div class="div-content-page">														
+			<article class="article-content-page">
+
+				<!-- Titre de l'article -->
+				<h2 class="title-content-page">
+					Les différents langages de programmation
+				</h2>	
+				
+				<!-- Texte de l'article -->
+				<p>
+					Il existe beaucoup de langages de programmation différents,
+					des simples, des complexes, des plus pratiques que d’autres,
+					etc. Ce qui est facile avec la programmation, c’est que nous
+					devons juste avoir un ordinateur, un éditeur de texte et de
+					l’imagination pour réaliser nos codes. 
+				</p>
+
+				<p>
+					Voici une présentation des principaux langages de 
+					programmation informatiques avec leurs fonctions et des 
+					exemples.
+				</p>
+
+				<p>
+					Nous commençons avec l’HTML, un langage de balises créé dans
+					les années 1990 par Tim Berners-Lee, aussi inventeur du 
+					World Wide Web. Aujourd’hui, la version actuelle est le HTML5.
+					Ce langage est composé de balises formant un code très 
+					propre qui constituent nos pages web aujourd’hui. D'autres 
+					technologies comme le CSS et le JavaScript sont utilisés 
+					avec l'HTML. Sur ce langage, nous pouvons insérer du texte,
+					des images, des vidéos, des liens, etc. Voilà un exemple d’HTML.
+				</p>
+
+				<img class="img-center" 
+						src="../images/code-html_langages.jpg" 
+							alt="code-html_langages.jpg">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://blog.udacity.com/2020/06/the-best-ways-to-learn-html.html"
+							target="_blank">blog.udacity.com
+					</a>
+				</p>
+
+				<img class="img-center" 
+						src="../images/2code-html_langages.jpg"
+							alt="2code-html_langages.jpg">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://blog.hubspot.fr/marketing/formulaire-inscription-newsletter-html"
+							target="_blank">blog.hubspot.fr
+					</a>
+				</p>
+
+				<p>
+					Le problème avec l’HTML, c’est qu’on ne peut pas faire des 
+					sites très beaux, ils ressemblent à cela. Ce sont simplement
+					des sites avec du texte, des titres, un peu de couleur, 
+					mais rien d'impressionnant. Heureusement que le CSS est 
+					arrivé… <br>
+				</p>
+
+				<img class="img-center" 
+						src="../images/html-sans-css.png" 
+							alt="html-sans-css.png">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://www.w3.org/Style/Examples/011/firstcss.fr.html"
+							target="_blank">w3.org
+					</a>
+				</p>
+
+				<p>
+					En deuxième, le CSS est un langage complétant l’HTML, 
+					c’est ce langage qui modifie les propriétés de notre
+					page HTML. CSS signifie "Cascading Style Sheets" et 
+					c’est avec lui qu’on change la couleur de police, la 
+					taille des images, etc. de notre page HTML La version 
+					actuelle est le CSS3 et c’est avec ce langage que nous 
+					pouvons affiner et structurer notre page HTML pas très 
+					jolie. Le code CSS ressemble à cela :
+				</p>
+
+				<img class="img-center" 
+						src="../images/code-css.jpg" 
+							alt="code-css.jpg">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://medium.com/creative-technology-concepts-code/css-in-javascript-with-angular-61da79111804"
+							target="_blank">medium.com
+					</a>
+				</p>
+
+				<p>
+					Ce sont des propriétés que nous appliquons sur notre
+					contenu HTML. Petit exemple, si j'aimerais avoir écrire
+					du texte jaune sur un site de fond noir, je m'y prends 
+					de la manière suivante :
+				</p>
+
+				<div class="content-code">
+					<div class="zone-code">
+						<blockquote class="code">
+							body <br>
+							{ <br>
+								background-color: black;	
+								/*Applique un fond noir sur le body*/ <br>
+							} <br><br>
+							p <br>
+							{ <br>
+								color: yellow;	
+								/*Applique une couleur jaune sur le p*/ <br>
+							} <br>
+						</blockquote>
+					</div>
+				</div>
+
+				<p>
+					Ensuite, nous avons le JavaScript, un langage sorti en 1995
+					connu pour être le langage de script pour les pages web. 
+					Son créateur est Brendan Eich, informaticien américain, 
+					fondateur de la société Brave Software dont il est directeur
+					général. C’est donc un langage beaucoup utilisé dans l’univers
+					du web. Il s’associe à l’HTML et le CSS en fonctionnant 
+					avec des scripts, il est aujourd’hui à sa 5ème version. 
+					Voici un exemple de code en Javascript :
+				</p>
+
+				<img class="img-center" 
+						src="../images/code-javascript.jpg" 
+							alt="code-javascript.jpg">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://www.zdnet.fr/actualites/25-ans-de-javascript-le-langage-de-programmation-qui-fait-tourner-le-monde-39914411.htm"
+							target="_blank">zdnet.fr
+					</a>
+				</p>
+
+				<p>
+					En JavaScript, il est possible d'effectuer des fonctions 
+					pour animer notre page HTML. Cela est très pratique pour 
+					styliser notre site. Le JavaScript fonctionne sur 
+					l'extension .js principalement. Pour les connaisseurs, le 
+					JavaScript peut être utilisé pour développer un bot sur 
+					l'application Discord, ce n'est pas réellement compliqué 
+					et il est possible de faire énormément de choses avec.
+				</p>
+
+				<img class="img-center" 
+						src="../images/bot-discord.png" 
+							alt="bot-discord.png">
+
+				<p>
+					Puis, nous avons le PHP, un langage de script comme le 
+					JavaScript qui a été créé en 1994 par Rasmus Lerdorf, 
+					programmeur groenlandais et canadien. Le PHP est un 
+					langage écrit en C, autre langage que nous verrons plus tard,
+					qui est conçu pour le développement d’applications web. 
+					Il peut être intégrer très facilement à l’HTML. Voici une 
+					image de code PHP intégrée dans un code HTML.
+				</p>
+
+				<img class="img-center" 
+					src="../images/code-php.jpg" 
+						alt="code-php">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://cleverplugins.com/autologin-wordpress-php-script/"
+							target="_blank">cleverplugins.com
+					</a>
+				</p>
+
+				<p>
+					En 5ème, le langage Java, un langage sorti en 1995 au 
+					SunWorld, est un langage qui a été racheté en 2009 par Oracle.
+					Le nom Java a été trouvé car le café (java en argot 
+					américain) est la boisson préférée de beaucoup de 
+					programmeurs. Java reprend en grande partie le C++ et a été
+					créé car l'ingénieur Patrick Naughton n'était pas satisfait
+					du C++. Java est le langage qui a été utilisé pour 
+					développer le jeu Minecraft, en 2009.
+				</p>
+
+				<img class="img-center" 
+						src="../images/code-java.png" 
+							alt="code-java.png">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://interestingengineering.com/4-ways-to-learn-java-without-going-back-to-university"
+							target="_blank">interestingengineering.com
+					</a>
+				</p>
+
+				<p>
+					La mascotte de Java est Duke, elle a été conçue pour 
+					définir un agent logiciel qui exécutait des tâches pour 
+					l'utilisateur au début de Java. Voici à quoi elle 
+					ressemble :
+				</p>
+
+				<img class="img-center" 
+						src="../images/mascotte-java.png" 
+							alt="La mascotte Java">
+		
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://www.pinclipart.com/pindetail/xToxwb_7-duke-java-clipart/"
+							target="_blank">pinclipart.com
+					</a>
+				</p>
+
+			</article>
+		</div>
+
+		<!-- Insère le texte de copyright pour l'image de fond -->
+		<p class="copyright">&copy; Copyright 
+			<a class="copyright-link" 				
+				href="https://pixabay.com/fr/photos/codage-programmation-travail-924920/" 
+					target="_blank">Pixabay
+			</a>																		
+		</p>
+
+		<!-- Pied de page contenant un tableau avec la certificaton W3C, le nom,
+			 la date et here actuelle et la flèche retour en haut de page -->
+			 <div class="footer">		
+				<!-- Création du tableau -->														
+				<table class="t-footer">														
+					<tr>
+						<!-- Certification W3C -->
+						<td class="certified">Site certifié W3C</td>
+						<!-- &copy; permet d'insérer le caractère copyright -->
+						<td class="author">&copy; Henchoz Noé</td>
+						<!-- Indique la date d'aujourd'hui -->
+						<td id="datum" class="date"></td>
+						<!-- Flèche permettant de retourner en haut de la page, au 
+							 	 header (top) -->							
+						<td class="arrow">
+							<a href="#top"><i class="fas fa-arrow-up"></i></a>					
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+	</body>
+	
+</html>

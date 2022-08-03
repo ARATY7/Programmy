@@ -1,0 +1,185 @@
+<!--
+Date : 04.01.2021
+Auteur : Noé Henchoz - 300211
+Descriptif : Ce fichier est le code source de la page "sites-web" du site 
+			 développé en HTML par Noé Henchoz lors du module 101 à l'EMF. 
+-->
+
+<!-- Déclaration du langage de ce fichier : HTML5 -->
+<!DOCTYPE html>
+
+<!-- Déclaration de la langue du site -->
+<html lang="fr-ch">																			
+
+	<head>
+		<!-- Encodage du site en UTF-8 -->
+		<meta charset="UTF-8"/>		
+		<!-- Sites web est donné comme titre -->														
+		<title>Sites web</title>	
+		<!-- Balise permettant d'adapter la largeur du du site par rapport à la
+			 largeur de l'apparreil pour le responsive -->
+    <meta name="viewport" content="width=device-width">	
+		<!-- Liaison des différentes pages CSS, image pour l'onglet et aussi 
+			 l'importation des icônes -->												
+		<link rel="stylesheet" href="./style.css"/>
+		<link rel="stylesheet" href="./header.css"/>
+		<link rel="icon" type="image/x-icon" href="../images/html5.png">					
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+				integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+					crossorigin="anonymous"/>
+		<link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		<!-- Intégration du script pour le header responsive et la date et 
+			 heure automatisée -->
+		<script src="./general.js"></script>																		
+	</head>
+
+	<body onload="start()" class="page">
+		<header id="top"> 
+			<nav class="menu">
+				<div class="inner">
+					<!-- Liste des boutons d'actions dans le menu -->
+					<div class="navigation" id="navbar">
+						<a href="../index.html">
+							<i class="fas fa-home"></i> 
+							Accueil
+						</a>
+						<a href="./programmation.html">
+							<i class="fas fa-code"></i> 
+							La Programmation
+						</a>
+						<a href="./sites-web.html" class="active">
+							<i class="fas fa-wifi"></i> 
+							Sites web
+						</a>
+						<a href="./jeux-video.html">
+							<i class="fas fa-gamepad"></i> 
+							Jeux vidéo
+						</a>
+						<a href="./langages.html">
+							<i class="fas fa-language"></i> 
+							Langages
+						</a>
+						<a class="icon" onclick="headerResponsive()">
+							<i class="fas fa-bars"></i>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Titre principal de la page : <La programmation de sites web> -->
+		<h1 class="title">&#60;La programmation de sites web&#62;</h1>										
+				
+		<!-- div contenant le contenu de la page, dans un article -->
+		<div class="div-content-page">														
+			<article class="article-content-page">
+
+				<!-- Titre de l'article : La Programmation de sites web -->
+				<h2 class="title-content-page">La Programmation de sites web</h2>
+				
+				<!-- Texte de l'article -->						
+				<p>
+					Tous les sites internet sur lesquels nous passons énormément
+					de temps aujourd’hui, sont construits à base de lignes de code.
+					Ce site-là, par exemple, est codé en HTML, un langage de 
+					programmation inventé en 1970, qui reste aujourd’hui, après
+					50 ans, l’un des langages les plus utilisés dans le monde 
+					de l’informatique.
+				</p>
+
+				<p>
+					Nous pouvons créer des sites statiques, comme ce site-là, 
+					ou bien des sites dynamiques, évoluant et à jour au fil du 
+					temps. Ce site est statique, cela veut dire que le texte 
+					qui est contenu ne changera pas d’ici 10 ans par exemple. 
+					Cela veut dire qu’à la fin du module HTML que nous apprenons 
+					actuellement, nous pouvons laisser notre site sur le web 
+					sans mise à jour, le contenu ne changera pas. Un site 
+					dynamique présentera par exemple des infos actuelles et 
+					sera tenu à jour au fil du temps.
+				</p>
+
+				<p>
+					Les sites internet sont développés à partir de plusieurs 
+					langages de programmation comme l’HTML, le CSS, le 
+					JavaScript, le PHP, etc. Tous ces langages forment ainsi 
+					les sites bien connus du web comme Google, Facebook, … : <br>
+				</p>
+
+				<img class="img-center" 
+						src="../images/liste-langages.png" 
+							alt="liste-langages.png">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://www.ionos.fr/digitalguide/sites-internet/developpement-web/langages-de-programmation-web/"
+							target="_blank">ionos.fr
+					</a>
+				</p>
+
+				<p>
+					Nous voyons plus profondément le fonctionnement et 
+					l’utilisation de ces langages 
+					<a href="./langages.html" class="legend-link">ici</a>.
+				</p>
+
+				<p>
+					Une fois le site développé, il faut le mettre en ligne sur 
+					le web, c’est ce qu’on appelle l’hébergement. Nous pouvons 
+					utiliser plusieurs sites d'hébergement comme infomaniak, 
+					hostpoint, … ou bien même notre propre server pour héberger
+					notre site web. Une fois notre site hébergé, il se
+					retrouvera dans des moteurs de recherche comme Google, 
+					Ecosia, … sur des navigateurs comme Google Chrome, Microsoft
+					Edge, … et sera accessible par les utilisateurs du web. <br>
+				</p>
+
+				<img class="img-center" 
+						src="../images/web-hosting.jpg" 
+							alt="web-hosting.jpg">
+
+				<!-- Légende de l'image avec lien de la source -->
+				<p class="legend">Source 
+					<a class="legend-link" 
+						href="https://www.webhostingsecretrevealed.net/fr/web-hosting-beginner-guide/"
+							target="_blank">webhostingsecretrevealed.net
+					</a>
+				</p>
+
+			</article>
+		</div>
+		
+		<!-- Insère le texte de copyright pour l'image de fond -->
+		<p class="copyright">&copy; Copyright 
+			<a class="copyright-link" 				
+				href="https://pixabay.com/fr/photos/codage-programmation-travail-924920/" 
+					target="_blank">Pixabay
+			</a>																		
+		</p>
+
+		<!-- Pied de page contenant un tableau avec la certificaton W3C, le nom,
+			 la date et here actuelle et la flèche retour en haut de page -->
+			 <div class="footer">		
+				<!-- Création du tableau -->														
+				<table class="t-footer">														
+					<tr>
+						<!-- Certification W3C -->
+						<td class="certified">Site certifié W3C</td>
+						<!-- &copy; permet d'insérer le caractère copyright -->
+						<td class="author">&copy; Henchoz Noé</td>
+						<!-- Indique la date d'aujourd'hui -->
+						<td id="datum" class="date"></td>
+						<!-- Flèche permettant de retourner en haut de la page, au 
+							 	 header (top) -->							
+						<td class="arrow">
+							<a href="#top"><i class="fas fa-arrow-up"></i></a>					
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+	</body>
+	
+</html>
